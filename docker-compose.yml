@@ -14,7 +14,7 @@ services:
     #   - local-db-data:/var/lib/postgresql/data
 
   api-server:
-    image: lms-public-api
+    image: vineel9168/lms
     build: api/
     environment:
       - MODE=local
@@ -27,7 +27,7 @@ services:
       - local-db
 
   web-server:
-    image: lms-web
+    image: vineel9168/lmswebapp
     build: webapp/
     environment:
       - MODE=local
